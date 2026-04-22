@@ -63,7 +63,7 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 // Constants
-const ADMIN_EMAIL = 'hugo01freiras@gmail.com';
+const ADMIN_EMAIL = 'email.site@teste.com';
 
 // Types
 type Tab = 'inicio' | 'produtos' | 'categoria' | 'sobre';
