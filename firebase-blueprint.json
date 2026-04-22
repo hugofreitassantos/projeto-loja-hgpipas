@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "product": {
+      "title": "Product",
+      "description": "A kite or accessory product",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The name of the product" },
+        "price": { "type": "number", "description": "The price of the product" },
+        "category": { "type": "string", "description": "The category of the product" },
+        "image": { "type": "string", "description": "The image URL of the product" },
+        "rating": { "type": "number", "description": "The rating of the product (1-5)" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When the product was created" }
+      },
+      "required": ["name", "price", "category", "image", "rating"]
+    },
+    "category": {
+      "title": "Category",
+      "description": "A product category",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The name of the category" },
+        "icon": { "type": "string", "description": "The emoji icon for the category" },
+        "description": { "type": "string", "description": "A short description of the category" }
+      },
+      "required": ["name", "icon"]
+    }
+  },
+  "firestore": {
+    "products": {
+      "schema": "product",
+      "description": "A collection of kite products"
+    },
+    "categories": {
+      "schema": "category",
+      "description": "A collection of kite categories"
+    }
+  }
+}
